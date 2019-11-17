@@ -1,7 +1,7 @@
 <div (click)="openMovie(movie.imdbID)">
   <h4>{{movie.Title}}</h4>
-  <div>{{movie.Year}}</div>
+  <div class="year">{{movie.Year}}</div>
   <img [src]="movie.Poster"
        [alt]="movie.Title">
-  <div>{{movie.Type}}</div>
+  <div class="type">{{movie.Type}}</div>
 </div>

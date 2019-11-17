@@ -5,7 +5,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { MovieComponent } from './components/movie/movie.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'movie/:id', component: MovieComponent },
   { path: '**', redirectTo: 'movies' },

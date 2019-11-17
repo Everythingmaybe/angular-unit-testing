@@ -19,8 +19,8 @@ export class MovieCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  openMovie(id: string): void {
-    this.router.navigateByUrl(`movie/${id}`);
+  openMovie(id: string = this.movie.imdbID): void {
+    this.router.navigate(['movie', id]);
   }
 
 }

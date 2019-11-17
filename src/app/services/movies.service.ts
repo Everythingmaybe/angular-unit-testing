@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 import { ShortMovieInfo } from '../models/short-movie-info';
-import {Movie} from '../models/movie';
+import { Movie } from '../models/movie';
 
 interface searchResponse {
   Response: string | boolean,
