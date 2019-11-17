@@ -1,0 +1,21 @@
+h2 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+
+nav {
+  margin-bottom: 2em;
+}
+
+.main {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.info {
+  flex-grow: 1;
+}

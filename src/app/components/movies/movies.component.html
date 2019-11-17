@@ -1,0 +1,8 @@
+<input [formControl]="searchControl" type="text">
+
+<div *ngIf="movies$ | async as movies"
+     class="movies-wrapper">
+  <app-movie-card *ngFor="let mov of movies; trackBy: trackByFn"
+                  [movie]="mov">
+  </app-movie-card>
+</div>
