@@ -13,7 +13,7 @@
       </div>
 
       <div class="poster">
-        <img [src]="movie.Poster" [alt]="movie.Title">
+        <img [src]="movie.Poster | defaultImage" [alt]="movie.Title">
       </div>
     </div>
 

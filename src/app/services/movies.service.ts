@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 import { ShortMovieInfo } from '../models/short-movie-info';
 import { Movie } from '../models/movie';
 
-interface searchResponse {
+interface SearchResponse {
   Response: string | boolean,
   Search: ShortMovieInfo[],
   totalResults?: string | number,
@@ -30,7 +30,7 @@ export class MoviesService {
   }
 
   searchMovies(title: string): Observable<ShortMovieInfo[]> {
-    return this.http.get<searchResponse>(environment.apiUrl, { params: { s: title } })
+    return this.http.get<SearchResponse>(environment.apiUrl, { params: { s: title } })
       .pipe(map((response) => response.Search || []));
   }
 }

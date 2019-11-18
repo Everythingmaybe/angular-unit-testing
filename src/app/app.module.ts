@@ -10,13 +10,15 @@ import { MovieComponent } from './components/movie/movie.component';
 import { MoviesService } from './services/movies.service';
 import { MovieParamsInterceptor } from './http-interceptors/movie-params.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     MovieCardComponent,
-    MovieComponent
+    MovieComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,
