@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieComponent } from './movie.component';
+import { DefaultImagePipe } from "../../pipes/default-image.pipe";
+import { RouterTestingModule } from "@angular/router/testing";
+import { MoviesService } from "../../services/movies.service";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
 describe('MovieComponent', () => {
   let component: MovieComponent;
@@ -8,7 +12,9 @@ describe('MovieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieComponent ]
+      declarations: [ MovieComponent, DefaultImagePipe ],
+      imports: [ RouterTestingModule, HttpClientTestingModule ],
+      providers: [ MoviesService ],
     })
     .compileComponents();
   }));

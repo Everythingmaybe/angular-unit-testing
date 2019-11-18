@@ -5,6 +5,7 @@ import { ShortMovieInfo } from '../../../models/short-movie-info';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { MovieComponent } from '../../movie/movie.component';
+import {DefaultImagePipe} from "../../../pipes/default-image.pipe";
 
 describe('MovieCardComponent', () => {
   let component: MovieCardComponent;
@@ -24,7 +25,7 @@ describe('MovieCardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule.withRoutes([{ path: 'movie/:id', component: MovieComponent }]) ],
-      declarations: [ MovieCardComponent, MovieComponent ],
+      declarations: [ MovieCardComponent, MovieComponent, DefaultImagePipe ],
     })
     .compileComponents();
   }));
