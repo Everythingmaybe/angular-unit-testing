@@ -5,6 +5,7 @@ import { MoviesComponent } from './movies.component';
 import { MoviesService } from '../../services/movies.service';
 import { RouterTestingModule } from "@angular/router/testing";
 import { DefaultImagePipe } from "../../pipes/default-image.pipe";
+import { of } from 'rxjs';
 
 describe('MoviesComponent', () => {
   let component: MoviesComponent;
@@ -36,12 +37,11 @@ describe('MoviesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('Должен начать поиск фильмов для строки "Fast and the"', fakeAsync(() => {
-  //   const searchString = 'Fast and the';
-  //   const searchSpy = spyOn(service, 'searchMovies');
-  //   component.movies$.subscribe();
-  //   component.searchControl.patchValue(searchString);
-  //   tick();
-  //   expect(searchSpy).toHaveBeenCalledWith(searchString);
-  // }));
+  it('Должен начать поиск фильмов для строки "Fast and the"', fakeAsync(() => {
+    const searchString = 'Fast and the';
+    const searchSpy = spyOn(service, 'searchMovies').and.returnValue(of());
+    component.searchControl.patchValue(searchString);
+    tick(300);
+    expect(searchSpy).toHaveBeenCalledWith(searchString);
+  }));
 });
