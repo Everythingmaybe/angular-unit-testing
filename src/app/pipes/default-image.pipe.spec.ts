@@ -1,7 +1,10 @@
 import { DefaultImagePipe, defaultSrc } from './default-image.pipe';
 
 describe('DefaultImagePipe', () => {
-  let pipe: DefaultImagePipe = new DefaultImagePipe();
+  let pipe: DefaultImagePipe;
+  beforeEach(() => {
+    pipe = new DefaultImagePipe();
+  });
 
   it('Должен быть создан', () => {
     expect(pipe).toBeTruthy();
